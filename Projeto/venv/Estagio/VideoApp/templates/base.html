@@ -1,0 +1,25 @@
+<!Doctype html>
+{% load static %}
+
+
+<html>
+
+<head>
+    <title>
+        {% block title %} {% endblock %}
+    </title>
+    <link href="{% static 'css/VideoApp.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Ricardo Maia</h1>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+
+</html>
