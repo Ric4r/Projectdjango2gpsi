@@ -16,14 +16,12 @@ class Post(models.Model):
     #Este campo vai atualizar automaticamente a data e hora do post sempre que ele for modificado
     updated = models.DateTimeField(auto_now=True)
 
-    class Meta:
-        ordering = ("-created",)
+
 
     def __str__(self):
         return self.title
 
     def get_absolute_url(self):
-        return reverse("blog:detail", kwargs={"slug": self.slug})
+        return reverse("VideoApp:detail", kwargs={"slug": self.slug})
 
-    class Meta:
-        ordering = ("-created",)
+   
