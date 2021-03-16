@@ -1,0 +1,19 @@
+{% extends "VideoApp/base.html" %}
+
+{% block title %} VideoPlayer {% endblock %}
+
+{% block content %}
+    {% for post in post_list %}
+        <article>
+            <h2>
+                <a href="{{ post.get_absolute_url }}">
+                     {{ post.title }}
+                </a>
+            </h2>
+            <p class=" date ">
+                publicado em {{ post.created }} por {{ post.author }}
+            </p>
+
+        </article>
+    {% endfor %}
+{% endblock %}
