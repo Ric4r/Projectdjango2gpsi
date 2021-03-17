@@ -1,26 +1,22 @@
 body {
-    margin: 0 25%;
-    font-family: sans-serif;
-    font-size: 1.5rem;
-    color: #111111;
-}
-#teste
-h1 {
-    text-align: center;
-    font-family: serif;
-    font-weight: normal;
-    border-bottom: 1px solid;
+    background-color: #0f121f;
+    background-image: url(Imagem-de-Fundo.jpg);
+    background-repeat-y: no-repeat;
+    color: #fff;
 }
 
-h2 {
-    color: #1f00aa;
-    font-weight: normal;
-    margin-bottom: 1px;
+body*{
+    font-family: Ubuntu;
 }
 
-a {
-    color:#0072aa;
-    text-decoration:none;
+h1, h2, h3, h4, h5{
+    font-weigth: normal;
+    margin: 0;
+}
+
+a, a:hover, a:visited{
+    color: #fff;
+    text-decoration: none;
 }
 
 p.date {
