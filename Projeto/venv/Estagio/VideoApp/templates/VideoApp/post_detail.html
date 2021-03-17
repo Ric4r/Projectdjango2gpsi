@@ -1,5 +1,6 @@
 {% extends "VideoApp/base.html" %}
 
+
 {% block title %} {{ post.title }} {% endblock%}}
 
 {% block content %}
@@ -8,5 +9,8 @@
         publicado em {{ post.created }} por {{ post.author }}
     </p>
     <img src="{{ post.thumb.url }}"/>
+
+
+
     {{ post.body|linebreaks }}
 {% endblock %}
