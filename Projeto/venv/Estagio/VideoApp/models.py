@@ -15,6 +15,8 @@ class Post(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     #Este campo vai atualizar automaticamente a data e hora do post sempre que ele for modificado
     updated = models.DateTimeField(auto_now=True)
+    #Este Campo permite ao usuario definir a thumbnail
+    thumb = models.ImageField(default='default.png', blank=True)
 
 
 
