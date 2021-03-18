@@ -1,6 +1,10 @@
 from django.contrib.auth.models import User
 from django.db import models
 from django.urls import reverse
+from embed_video.fields import EmbedVideoField
+
+class Videos(models.Model):
+    video = EmbedVideoField()
 
 class Post(models.Model):
     #Este campo aguenta ate 255 caracteres
