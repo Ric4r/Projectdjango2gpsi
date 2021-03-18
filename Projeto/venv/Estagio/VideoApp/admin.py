@@ -11,5 +11,6 @@ admin.site.register(Videos, MyModelAdmin)
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
-    list_display = ("title","slug","author","created","updated")
+    list_display = ("title","slug","author","created","updated","videos")
     prepopulated_fields ={"slug":("title",)}
+    Post = ("title","slug","author","body","created","updated","thumb","video")
