@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'VideoApp.apps.VideoappConfig',
+
+    'embed_video',
 ]
 
 MIDDLEWARE = [

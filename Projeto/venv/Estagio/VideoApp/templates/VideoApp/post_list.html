@@ -4,17 +4,18 @@
 
 {% block content %}
     {% for post in post_list %}
-        <article>
+       <div>
 
             <h2>
                 <a href="{{ post.get_absolute_url }}">
                      {{ post.title }}
+
                 </a>
             </h2>
             <p class=" date ">
                 publicado em {{ post.created }} por {{ post.author }}
             </p>
 
-        </article>
+        </div>
     {% endfor %}
 {% endblock %}
