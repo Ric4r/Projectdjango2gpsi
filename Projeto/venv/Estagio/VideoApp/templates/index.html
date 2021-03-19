@@ -11,34 +11,16 @@
     <title>YT Caseiro</title>
   </head>
   <body>
-    <nav class="navbar navbar-dark bg-dark">
-        <span class="navbar-brand mb-0 h1">Video Catalog</span>
-      </nav>
-    <h1>Publish your own Video</h1>
     <div class="container">
 
      <div class="mt-5">
       <form action="." method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{form.as_p}}
-        <button class="btn btn-success btn-lg">Upload</button>
+        <button class="btn btn-primary btn-lg">Upload</button>
 
       </form>
     </div>
-
-    <hr>
-    {% for x in all %}
-        <h3 class="text-center mt-2 mb-2">{{x.title}}</h3>
-        <h4 class="text-left mt-2 mb-2">{{x.author}}</h4>
-        <h4 class="text-left mt-2 mb-2">{{x.body}}</h4>
-        <h6 class="text-left mt-2 mb-2">{{x.created}}</h6>
-        <h7 class="text-left mt-2 mb-2">{{x.updated}}</h7>
-        <br>
-        <img class="aligned-right" src="{{x.thumb.url}}" width="125px"/>
-        <video class="embed-responsive embed-responsive-16by9" controls="controls" >
-            <source src="{{x.videos.url}}" type="video/mp4" />
-          </video>
-        {% endfor %}
 
     </div>
 

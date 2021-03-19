@@ -22,11 +22,10 @@ from django.conf import settings
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path("VideoApp/", include("VideoApp.urls", namespace="VideoApp")),
+    path('admin2021', admin.site.urls),
+    path("Upload", include("VideoApp.urls", namespace="VideoApp")),
+    path('videos', include("VideoApp.urls", namespace="VideoApp"))
 ]
 
 urlpatterns += staticfiles_urlpatterns()
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
-

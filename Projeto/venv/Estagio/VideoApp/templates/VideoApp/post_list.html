@@ -3,18 +3,19 @@
 {% block title %} VideoPlayer {% endblock %}
 
 {% block content %}
-    {% for post in post_list %}
+    {% for post in index %}
         <article>
-
-            <h2>
-                <a href="{{ post.get_absolute_url }}">
-                     {{ post.title }}
-                </a>
-            </h2>
-            <p class=" date ">
-                publicado em {{ post.created }} por {{ post.author }}
-            </p>
-
+            {% for x in all %}
+        <h3 class="text-center mt-2 mb-2">{{x.title}}</h3>
+        <h4 class="text-left mt-2 mb-2">{{x.author}}</h4>
+        <h4 class="text-left mt-2 mb-2">{{x.body}}</h4>
+        <h6 class="text-left mt-2 mb-2">{{x.created}}</h6>
+        <br>
+        <img class="aligned-right" src="{{x.thumb.url}}" width="125px"/>
+        <video class="embed-responsive embed-responsive-16by9" controls="controls" >
+            <source src="{{x.videos.url}}" type="video/mp4" />
+          </video>
+        {% endfor %}
         </article>
     {% endfor %}
 {% endblock %}
