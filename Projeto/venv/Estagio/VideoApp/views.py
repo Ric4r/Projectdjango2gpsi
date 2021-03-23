@@ -1,10 +1,23 @@
 from django.views.generic import DetailView, ListView
 from .forms import Video_form
-from django.shortcuts import render,HttpResponse,redirect
+from django.shortcuts import render,redirect
 from .models import (
     Post,
     Videos
 )
+
+from django.http import HttpResponse
+
+
+def home(request):
+    return render(request, 'base.html')
+
+def upload(request):
+    return render(request, 'index.html')
+
+def videos(request):
+    return render(request, 'post_list.html')
+
 
 
 def index(request):
@@ -16,7 +29,7 @@ def index(request):
             return HttpResponse("<h1> Uploaded successfully </h1>")
     else:
         form=Video_form()
-    return render(request,'index.html',{"form":form,"all":all_video})
+    return render(request,'post_list.html',{"form":form,"all":all_video})
 
 
 class PostListView(ListView):

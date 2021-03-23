@@ -21,10 +21,13 @@ from django.conf.urls.static import static
 from django.conf import settings
 
 
+
+
 urlpatterns = [
-    path('admin2021', admin.site.urls),
-    path("Upload", include("VideoApp.urls", namespace="VideoApp")),
-    path('videos', include("VideoApp.urls", namespace="VideoApp"))
+    path('admin/', admin.site.urls),
+    path('Upload', include('VideoApp.urls')),
+    path('videos', include('VideoApp.urls')),
+    path('', include('VideoApp.urls')),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
