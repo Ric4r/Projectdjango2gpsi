@@ -13,23 +13,27 @@ def home(request):
     return render(request, 'base.html')
 
 def upload(request):
-    return render(request, 'index.html')
-
-def videos(request):
-    return render(request, 'post_list.html')
-
-
-
-def index(request):
-    all_video=Post.objects.all()
+    all_video = Post.objects.all()
     if request.method == "POST":
-        form=Video_form(data=request.POST,files=request.FILES)
+        form = Video_form(data=request.POST, files=request.FILES)
         if form.is_valid():
             form.save()
             return HttpResponse("<h1> Uploaded successfully </h1>")
     else:
-        form=Video_form()
-    return render(request,'post_list.html',{"form":form,"all":all_video})
+        form = Video_form()
+    return render(request, 'index.html', {"form": form, "all": all_video})
+
+
+def videos(request):
+    all_video = Post.objects.all()
+    if request.method == "POST":
+        form = Video_form(data=request.POST, files=request.FILES)
+        if form.is_valid():
+            form.save()
+            return HttpResponse("<h1> Uploaded successfully </h1>")
+    else:
+        form = Video_form()
+    return render(request, 'post_list.html', {"form": form, "all": all_video})
 
 
 class PostListView(ListView):
