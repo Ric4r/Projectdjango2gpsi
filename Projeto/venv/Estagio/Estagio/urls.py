@@ -27,6 +27,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('Upload', include('VideoApp.urls')),
     path('videos', include('VideoApp.urls')),
+    path('videos/video', include('VideoApp.urls')),
     path('', include('VideoApp.urls')),
 ]
 

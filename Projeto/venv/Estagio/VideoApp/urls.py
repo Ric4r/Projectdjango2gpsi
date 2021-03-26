@@ -12,9 +12,10 @@ app_name = "VideoApp"
 urlpatterns = [
     path('Upload/', views.upload),
     path('videos/', views.videos),
+    path('videos/video/', views.video),
     path('', views.home),
-
 ]
+
 urlpatterns += staticfiles_urlpatterns()
 
 if settings.DEBUG:
