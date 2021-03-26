@@ -3,7 +3,6 @@ from .forms import Video_form
 from django.shortcuts import render,redirect
 from .models import (
     Post,
-    Videos
 )
 
 from django.http import HttpResponse
@@ -34,16 +33,4 @@ def videos(request):
     else:
         form = Video_form()
     return render(request, 'post_list.html', {"form": form, "all": all_video})
-
-
-class PostListView(ListView):
-    model = Post
-    videos = Videos.objects.all()
-
-
-
-class PostDetailView(DetailView):
-    model = Post
-    videos = Videos.objects.all()
-
 

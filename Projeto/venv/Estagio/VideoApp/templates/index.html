@@ -1,7 +1,7 @@
 <!doctype html>
 {% load static %}
 {% load embed_video_tags %}
-<html lang="en">
+<html lang="pt-pt">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -9,13 +9,11 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
-    <title>YT Caseiro</title>
+    <link href="{% static 'css/VideoApp.css' %}" rel="stylesheet">
+    <title>nome do app</title>
   </head>
   <body>
     <div class="container">
-
-<!--upload-->
      <div class="mt-5">
       <form action="" method="post" enctype="multipart/form-data">
         {% csrf_token %}

@@ -3,23 +3,29 @@
 {% load embed_video_tags %}
 
 <html>
-
-
 <head>
-    <title>{% block title %} {% endblock %}</title>
+    <title>nome do app</title>
     <link href="{% static 'css/VideoApp.css' %}" rel="stylesheet">
 </head>
-
 <body>
-<h1>Home Page</h1>
-    <header>
-        <h2> Videos </h2>
-    </header>
+
+<div class="azul"> <h1 style="color:rgb(19,107,147)">NOME DO APP</h1>
+
+</div>
+<div class="azul2">
+<pre>
+<br>
+<br>
+        <a href="videos/" style="color:rgb(19,107,147)">Videos</a>
+        <br>
+        <a href="Upload/" style="color:rgb(19,107,147)">Upload</a>
+</div>
+</pre>
 <!--base-->
-    <main>
+<main>
         {% block content %}
         {% endblock %}
-    </main>
+</main>
 
 
 </body>

@@ -5,9 +5,6 @@ from embed_video.fields import EmbedVideoField
 from .validators import file_size
 
 
-class Videos(models.Model):
-    video = EmbedVideoField()
-
 class Post(models.Model):
     #Este campo aguenta ate 255 caracteres
     title = models.CharField(max_length=255)

@@ -1,6 +1,6 @@
+
 body {
-    background-color: #0f121f;
-    background-image: url(Imagem-de-Fundo.jpg);
+    background-color: rgb(19,107,147);
     background-repeat-y: no-repeat;
     color: #fff;
 }
@@ -8,8 +8,15 @@ body {
 body*{
     font-family: Ubuntu;
 }
+h1 {
+    font-weigth: normal;
+    font-style: normal;
+    font-size: 75px;
+    margin: 0;
+    text-align: center;
+}
 
-h1, h2, h3, h4, h5{
+h2, h3, h4, h5{
     font-weigth: normal;
     margin: 0;
 }
@@ -23,4 +30,20 @@ p.date {
     font-size: 0.8rem;
     font-style: italic;
     margin-top: 1px;
+}
+
+a {
+    font-size: 35px;
+
+}
+
+.azul{
+background-color: rgb(203,221,230);
+border-top: 14px solid rgb(203,221,230);
+}
+.azul2{
+width:300px;
+background: rgb(203,221,230);
+padding-left:50px;
+border-bottom: 50px solid rgb(203,221,230);
 }

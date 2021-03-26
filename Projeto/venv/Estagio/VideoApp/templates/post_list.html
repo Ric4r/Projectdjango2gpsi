@@ -1,7 +1,7 @@
 <!doctype html>
 {% load static %}
 {% load embed_video_tags %}
-<html lang="en">
+<html lang="pt-pt">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -9,30 +9,34 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
-    <title>YT Caseiro</title>
+    <link href="{% static 'css/VideoApp.css' %}" rel="stylesheet">
+    <title>nome do app</title>
   </head>
   <body>
   <!--videos-->
+
+    <div class="azul"> <h1 style="color:rgb(19,107,147)">NOME DO APP</h1>
+
+    </div>
+
   <div>
-    <nav class="navbar navbar-dark bg-dark">
-        <span class="navbar-brand mb-0 h1">Video Catalog</span>
-      </nav>
-
-
-
-    <hr>
+      <br>
     {% for x in all %}
-        <h3 class="text-center mt-2 mb-2">{{x.title}}</h3>
-        <h4 class="text-left mt-2 mb-2">{{x.author}}</h4>
-        <h4 class="text-left mt-2 mb-2">{{x.body}}</h4>
-        <h6 class="text-left mt-2 mb-2">{{x.created}}</h6>
-        <h7 class="text-left mt-2 mb-2">{{x.updated}}</h7>
+
+        <a href="{{x.videos.url}}"><img class="aligned-right" src="{{x.thumb.url}}" width="300px"/></a>
         <br>
-        <img class="aligned-right" src="{{x.thumb.url}}" width="300px"/>
-        <video class="embed-responsive embed-responsive-16by9" controls="controls" >
-            <source src="{{x.videos.url}}" type="video/mp4"/>
-          </video>
+        <h6 class="text-left mt-1 mb-1">{{x.title}}</h6>
+        <h6 class="text-left mt-1 mb-1">{{x.author}}</h6>
+        <h6 class="text-left mt-1 mb-1">{{x.body}}</h6>
+        <h7 class="text-left mt-1 mb-1">{{x.created}}</h7>
+      <!--
+        <video width="720" height="480" controls="controls" autoplay="autoplay">
+        <source src="{{x.videos.url}}" type="video/mp4">
+        <object data="" width="720" height="480">
+        <embed width="720" height="480" src="{{x.videos.url}}">
+        </object>
+        </video>
+        -->
         {% endfor %}
 
     </div>
