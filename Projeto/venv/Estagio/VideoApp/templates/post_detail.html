@@ -1,6 +1,7 @@
 <!doctype html>
 {% load static %}
 {% load embed_video_tags %}
+
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -18,12 +19,14 @@
       </nav>
     <h1>Publish your own Video</h1>
     <div class="container">
-        
+
     <hr>
+
     {% for x in all %}
         <video class="embed-responsive embed-responsive-16by9" controls="controls" >
             <source src="{{x.videos.url}}" type="video/mp4" />
           </video>
+
         {% endfor %}
 
     </div>

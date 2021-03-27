@@ -45,3 +45,4 @@ def video(request):
     else:
         form = Video_form()
     return render(request, 'post_detail.html', {"form": form, "all": all_video})
+
